@@ -37,6 +37,10 @@ document.addEventListener("DOMContentLoaded", function(_e) {
             }
         }
     }, { passive: true });
+
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/js/sw.js')
+    }
     
     
     /** User information management: card number, email address, firstname, lastname */    
