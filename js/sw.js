@@ -9,6 +9,7 @@ var appShellFiles = [
     '/js/app.js',
     '/images/barcode-scanner.png',
     '/images/icon-cart.png',
+    '/images/icon-setup.png',
     '/images/icon-transmit.png',
     '/images/logo.png',
 ]
