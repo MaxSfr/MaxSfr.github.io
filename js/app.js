@@ -9,7 +9,14 @@ const TRANMISSION_URL = "https://dept-info.univ-fcomte.fr/licence/SAMP/";
  *                                                                      *
  ************************************************************************/
 document.addEventListener("DOMContentLoaded", function(_e) {
-    
+
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/js/sw.js').then(function(reg) {
+            // registration worked
+            console.log('Registration succeeded. Scope is ' + reg.scope);
+        })
+    }
+
     
     /** Touch Events related to the bcStart block **/
     let touchStart = {x: null, y: null};
@@ -36,12 +43,7 @@ document.addEventListener("DOMContentLoaded", function(_e) {
                         "T'as pas de force dans les doigts ?";
             }
         }
-    }, { passive: true });
-
-    if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('/js/sw.js')
-    }
-    
+    }, { passive: true });    
     
     /** User information management: card number, email address, firstname, lastname */    
     let userinfo = {

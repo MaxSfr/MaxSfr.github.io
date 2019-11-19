@@ -1,4 +1,4 @@
-var cacheName = 'js13kPWA-v1';
+var cacheName = 'MaxSfr-v1';
 var appShellFiles = [
     'index.html',
     'style.css',
